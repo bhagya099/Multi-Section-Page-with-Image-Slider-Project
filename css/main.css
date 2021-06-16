@@ -1,0 +1,203 @@
+body {
+    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    color: #5c5151;
+    margin: 0;
+
+}
+
+h1,
+h2,
+p {
+
+    margin-top: 0;
+    /* remove space before   */
+    margin-bottom: 0.5em;
+    /* set bottom to half of the font size */
+
+}
+
+h1,
+h2 {
+    font-weight: 800;
+}
+
+h1 {
+    font-size: 2em;
+    color: #8d5a36;
+}
+
+a {
+    text-decoration: none;
+}
+
+section,
+footer {
+    /*    adding vertical space */
+    padding: 20px 0;
+}
+
+.topnav {
+    background-color: darkgreen;
+}
+
+/*descendant selector -applies to ul inside topnav*/
+.topnav ul {
+    /*    remove bullets*/
+    list-style-type: none;
+    /*    remove vertical spacing*/
+    margin: 0;
+    /*    remove ident on left*/
+    padding: 0;
+}
+
+/*anchor inside topnav*/
+.topnav a {
+    color: white;
+    padding: 12px;
+    display: block;
+    text-align: center;
+    background-color: darkgreen;
+    border-bottom: solid 1px #171313;
+    transition: 0.4s;
+}
+
+/*default anchor styles*/
+/*a:link for not visited*/
+.topnav a:visited {
+    color: #2c0a10;
+    text-decoration: none;
+}
+
+.topnav a:active {
+    /*for active link*/
+    color: brown;
+}
+
+.topnav a:hover {
+    /*when u mouse over the link*/
+    color: #b4b441;
+    text-decoration: underline;
+    background-color: rgba(89, 123, 100, 0.68);
+}
+
+header {
+    /*    to set the backgournd */
+    background-color: #153615;
+    background-image: url(../img/header2.jpg);
+    background-repeat: no-repeat;
+    /* to set ur image dont repeat if u resize the window*/
+    /*    to set ur image fill with window*/
+    background-size: cover;
+    background-position: center;
+    padding: 160px 40px;
+    text-align: center;
+
+
+}
+
+footer {
+    background-color: #637928;
+}
+
+.pagetitle {
+    font-size: 3em;
+    margin-bottom: 0;
+    letter-spacing: -1px;
+    text-transform: capitalize;
+
+
+}
+
+.tageline {
+    font-size: 2em;
+    font-weight: 100;
+    text-transform: capitalize;
+    line-height: 1.1em;
+
+}
+
+.wrapper {
+    /*    restric width of the content*/
+    max-width: 1200px;
+    /*    center the wrapper */
+    margin: 0 auto;
+    width: 90%;
+}
+
+.odd {
+    background-color: antiquewhite;
+}
+
+.even {
+    background-color: beige;
+}
+
+.highlight {
+    color: #904350;
+}
+
+/*container*/
+.social {
+    padding: 10px;
+    margin: 6px;
+    background-color: #5c2e2e;
+    display: flex;
+    justify-content: center;
+}
+
+/*content*/
+.social img {
+    padding: 10px;
+    width: 30px;
+}
+
+/*media queries*/
+
+@media(min-width:600px) {
+    .topnav ul {
+        /*        show menu horizontal list*/
+        display: flex;
+        justify-content: center;
+    }
+
+    .topnav a {
+        /*        turnoff the border*/
+        border: none;
+        padding: 10px 20px;
+    }
+
+    /*    font size is smaller than this in pagetitle class always check ur code*/
+    .pagetitle {
+        font-size: 5em;
+    }
+
+    .tageline {
+        font-size: 4em;
+    }
+
+    .social img {
+        width: 80px;
+    }
+
+    .columns {
+        display: flex;
+        /*increase width of colmun div to compensate for padding on column divs*/
+        margin: 0 -10px;
+    }
+
+    .column {
+        padding: 0 10px;
+        /*    allowing cols can grow if u have space*/
+        flex-grow: 1;
+        /*  but cant shrink*/
+        flex-shrink: 0;
+        /*stop column to grow ,set a desire width*/
+        flex-basis: 0;
+        
+/*       
+        shorthand property for flex*/
+/*        flex:1 1 0*/
+    }
+
+}
